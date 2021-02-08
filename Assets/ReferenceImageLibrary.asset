@@ -21,7 +21,7 @@ MonoBehaviour:
     m_SerializedTextureGuid:
       m_GuidLow: 17916693676335891529
       m_GuidHigh: 4226922625402596584
-    m_Size: {x: 0.3, y: 0.16326532}
+    m_Size: {x: 0.25, y: 0.13605443}
     m_SpecifySize: 1
-    m_Name: mario
+    m_Name: carnaval
     m_Texture: {fileID: 0}
