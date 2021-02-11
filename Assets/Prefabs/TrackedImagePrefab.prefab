@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7252740003987834556}
   - component: {fileID: 1385670804537982026}
+  - component: {fileID: 2076698765401208961}
   m_Layer: 0
   m_Name: TrackedImagePrefab
   m_TagString: Untagged
@@ -45,6 +46,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_DestroyOnRemoval: 1
+--- !u!114 &2076698765401208961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7252740003987834559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da393fdc7b13d4444911c2460898bcf2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cards:
+  - id: Carte01
+    gameObject: {fileID: 7359863194717776577}
 --- !u!1 &7359863194717776577
 GameObject:
   m_ObjectHideFlags: 0
@@ -62,7 +78,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4167198147351214349
 Transform:
   m_ObjectHideFlags: 0
