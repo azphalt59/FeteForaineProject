@@ -25,3 +25,33 @@ MonoBehaviour:
     m_SpecifySize: 1
     m_Name: Carte01
     m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5418680822156101125
+      m_GuidHigh: 17386637413270704292
+    m_SerializedTextureGuid:
+      m_GuidLow: 2176487704120032228
+      m_GuidHigh: 18136919732015819480
+    m_Size: {x: 0.061, y: 0.1120875}
+    m_SpecifySize: 1
+    m_Name: ClefComplete
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4677455701558957259
+      m_GuidHigh: 11227310730433875363
+    m_SerializedTextureGuid:
+      m_GuidLow: 9769684071486606902
+      m_GuidHigh: 3736611975470533770
+    m_Size: {x: 0.061, y: 0.1120875}
+    m_SpecifySize: 1
+    m_Name: ClefPartie1
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5568878962404829285
+      m_GuidHigh: 14432944059711598485
+    m_SerializedTextureGuid:
+      m_GuidLow: 15727759411901700464
+      m_GuidHigh: 11065628307366973465
+    m_Size: {x: 0.061, y: 0.1120875}
+    m_SpecifySize: 1
+    m_Name: ClefPartie2
+    m_Texture: {fileID: 0}
