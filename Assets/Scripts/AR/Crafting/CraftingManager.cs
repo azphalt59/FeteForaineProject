@@ -73,7 +73,6 @@ public class CraftingManager : MonoBehaviour
     }
 
     private void UpdateResult(CraftRecipe recipe, CraftCard Card1, CraftCard Card2){
-        Debug.Log(Card1.name + " " + Card2.name);
         GameObject result = reciperesults[recipeList.recipes.IndexOf(recipe)];
         result.SetActive(true);
         result.transform.position = Vector3.Lerp(Card1.transform.position,Card2.transform.position,0.5f);
