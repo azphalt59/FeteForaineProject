@@ -8,7 +8,7 @@ public class CraftCard : MonoBehaviour
     [SerializeField]
     private GameObject model;
 
-    public static List<CraftCard> AllCards;
+    public static List<CraftCard> AllCards = new List<CraftCard>();
 
     private void OnEnable() {
         AllCards.Add(this);
