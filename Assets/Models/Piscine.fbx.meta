@@ -7,8 +7,13 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Piscine
+    second: {fileID: 2100000, guid: 16ffd52735364a7479fd16b7b247b797, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Water
-    second: {fileID: 2100000, guid: 049807052d7fe8d488506a7e16cbcc3c, type: 2}
+    second: {fileID: 2100000, guid: cde3c21fdda04874fba5a9c4bcfe799d, type: 2}
   materials:
     materialImportMode: 1
     materialName: 0

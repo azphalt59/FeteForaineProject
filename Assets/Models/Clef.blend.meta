@@ -1,24 +1,9 @@
 fileFormatVersion: 2
-guid: 842c85d7122e3e04d8af47f6cd1fcf1d
+guid: 031ffa55dc11f804d9e5c509ab51b7bd
 ModelImporter:
   serializedVersion: 20101
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Material.001
-    second: {fileID: 2100000, guid: 16ffd52735364a7479fd16b7b247b797, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Piscine
-    second: {fileID: 2100000, guid: 16ffd52735364a7479fd16b7b247b797, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Water
-    second: {fileID: 2100000, guid: cde3c21fdda04874fba5a9c4bcfe799d, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
