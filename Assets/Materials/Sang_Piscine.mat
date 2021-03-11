@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Eau_Piscine
+  m_Name: Sang_Piscine
   m_Shader: {fileID: -6465566751694194690, guid: d186b007608ecd04e95d8625c0eeaa67, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
@@ -70,7 +70,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - Vector1_1E476A36: 0.1
-    - Vector1_53665404: 0.95
+    - Vector1_53665404: 1
     - Vector1_7A822DD7: 0.03
     - Vector1_DD5A96EF: 1
     - Vector1_F9DC6CB1: 3
@@ -100,9 +100,9 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 0
     m_Colors:
-    - Color_12D3E55: {r: 0.16745284, g: 0.31399903, b: 0.5, a: 1}
-    - Color_43A19122: {r: 0.21293166, g: 0.49416322, b: 0.8207547, a: 1}
-    - Color_F42FACE1: {r: 1, g: 1, b: 1, a: 1}
+    - Color_12D3E55: {r: 0.26415092, g: 0.09989946, b: 0.095941596, a: 1}
+    - Color_43A19122: {r: 0.7924528, g: 0.22200957, b: 0.16820934, a: 1}
+    - Color_F42FACE1: {r: 0.31132078, g: 0.0102794655, b: 0.0649529, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
