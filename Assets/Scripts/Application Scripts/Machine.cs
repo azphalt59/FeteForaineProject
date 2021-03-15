@@ -9,6 +9,13 @@ public class Machine : MonoBehaviour
     string machineTextValue = "";
     public GameObject canvasMachine;
 
+    public List<string> machines = new List<string>();
+    [Header("Machines")]
+    public GameObject TirCarabine;
+    public GameObject LaBoule;
+    public GameObject Cryptex;
+    public GameObject ToucheCoule;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -47,9 +54,28 @@ public class Machine : MonoBehaviour
     }
     public void ConfirmCode()
     {
-        if(machineTextValue == "10")
+        if (machines.Contains(machineTextValue))
         {
-            Debug.Log("Lance la machine de la carte 10");
+            if(machineTextValue == machines[0]) //01
+            {
+                TirCarabine.SetActive(true);
+                Debug.Log("MachineCarabine");
+            }
+            if(machineTextValue == machines[1]) //10
+            {
+                LaBoule.SetActive(true);
+                Debug.Log("MachineCarabine");
+            }
+            if(machineTextValue == machines[2]) //30
+            {
+                Cryptex.SetActive(true);
+                Debug.Log("MachineCarabine");
+            }
+            if(machineTextValue == machines[3]) //55
+            {
+                ToucheCoule.SetActive(true);
+                Debug.Log("MachineCarabine");
+            }
         }
         else
         {
