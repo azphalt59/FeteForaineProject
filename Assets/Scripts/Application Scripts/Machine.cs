@@ -8,6 +8,17 @@ public class Machine : MonoBehaviour
     public Text machineText;
     string machineTextValue = "";
     public GameObject canvasMachine;
+    public GameObject wrongMachine;
+    public GameObject canvasMain;
+    public GameObject canvasCryptex;
+    public GameObject canvasPlomb;
+
+    public List<string> machines = new List<string>();
+    [Header("Machines")]
+    public GameObject TirCarabine;
+    public GameObject LaBoule;
+    public GameObject Cryptex;
+    public GameObject ToucheCoule;
 
     // Start is called before the first frame update
     void Start()
@@ -47,9 +58,42 @@ public class Machine : MonoBehaviour
     }
     public void ConfirmCode()
     {
-        if(machineTextValue == "10")
+        if (machines.Contains(machineTextValue))
         {
-            Debug.Log("Lance la machine de la carte 10");
+            if(machineTextValue == machines[0]) //77
+            {
+                TirCarabine.SetActive(true);
+                canvasMain.SetActive(false);
+                canvasMachine.SetActive(false);
+                Debug.Log("MachineCarabine");
+            }
+            if(machineTextValue == machines[1]) //56
+            {
+                LaBoule.SetActive(true);
+                canvasMachine.SetActive(false);
+                canvasMain.SetActive(false);
+                Debug.Log("MachineBoule");
+            }
+            if(machineTextValue == machines[2]) //79
+            {
+                Cryptex.SetActive(true);
+                Debug.Log("MachineCryptex");
+                canvasMain.SetActive(false);
+                canvasMachine.SetActive(false);
+                canvasCryptex.SetActive(true);
+            }
+            if(machineTextValue == machines[3]) //87
+            {
+                ToucheCoule.SetActive(true);
+                Debug.Log("MachineToucheCoule");
+            }
+            if(machineTextValue == machines[4]) //87
+            {
+                canvasPlomb.SetActive(true);
+                canvasMain.SetActive(false);
+                canvasMachine.SetActive(false);
+                Debug.Log("MachinePlomb");
+            }
         }
         else
         {
