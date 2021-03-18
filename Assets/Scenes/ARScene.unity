@@ -123,6 +123,63 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &448491729
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 3aaf339dd6f20d94cb8f75835ce5785a, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3aaf339dd6f20d94cb8f75835ce5785a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.0965
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3aaf339dd6f20d94cb8f75835ce5785a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3aaf339dd6f20d94cb8f75835ce5785a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3aaf339dd6f20d94cb8f75835ce5785a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3aaf339dd6f20d94cb8f75835ce5785a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3aaf339dd6f20d94cb8f75835ce5785a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3aaf339dd6f20d94cb8f75835ce5785a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3aaf339dd6f20d94cb8f75835ce5785a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3aaf339dd6f20d94cb8f75835ce5785a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 3aaf339dd6f20d94cb8f75835ce5785a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3aaf339dd6f20d94cb8f75835ce5785a, type: 3}
+      propertyPath: m_Name
+      value: Canne_A_Peche
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3aaf339dd6f20d94cb8f75835ce5785a, type: 3}
 --- !u!1 &647993151
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,7 +727,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6486538621878513650, guid: 586a24e2d2b37b9428264949cb84d431, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 1.74
       objectReference: {fileID: 0}
     - target: {fileID: 6486538621878513650, guid: 586a24e2d2b37b9428264949cb84d431, type: 3}
       propertyPath: m_LocalRotation.w
