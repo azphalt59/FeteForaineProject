@@ -26,14 +26,6 @@ public class DuckMovement : MonoBehaviour
     [SerializeField]
     private Transform Model;
 
-    [System.Serializable]
-    private enum CanardStates{
-        Swimming,
-        Caught
-    }
-
-    private CanardStates CurrentCanardState = CanardStates.Swimming;
-
     // Start is called before the first frame update
     void Start()
     {
@@ -44,7 +36,7 @@ public class DuckMovement : MonoBehaviour
     void Update()
     {
         transform.localPosition = GetSwimPosition((Time.time + StartOffset) * RotationTime * 360);
-        Model.transform.localEulerAngles = GetSwimRotation((Time.time + StartOffset) * BobblingSpeed);
+        Model.transform.localEulerAngles = GetSwimRotation((Time.time + StartOffset), BobblingSpeed, RotationTime);
     }
 
     Vector3 GetSwimPosition(float Time){
@@ -61,11 +53,13 @@ public class DuckMovement : MonoBehaviour
         return finalpos;
     }
 
-    Vector3 GetSwimRotation(float Time){
+    Vector3 GetSwimRotation(float Time, float BobblingSpeed, float rotationTime){
         Vector3 rotation = Vector3.zero;
-        rotation.x = Mathf.Cos(Time);
-        rotation.z = Mathf.Sin(Time);
+        rotation.x = Mathf.Cos(Time) * BobblingSpeed;
+        rotation.z = Mathf.Sin(Time) * BobblingSpeed;
         rotation = rotation * BobbleAngle;
+        rotation.y = (Time * 360) * RotationTime;
+        rotation.y += 90;
         return rotation;
     }
 
