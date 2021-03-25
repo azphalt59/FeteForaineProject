@@ -26,6 +26,14 @@ public class DuckMovement : MonoBehaviour
     [SerializeField]
     private Transform Model;
 
+    [System.Serializable]
+    private enum CanardStates{
+        Swimming,
+        Caught
+    }
+
+    private CanardStates CurrentCanardState = CanardStates.Swimming;
+
     // Start is called before the first frame update
     void Start()
     {

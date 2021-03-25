@@ -55,3 +55,23 @@ MonoBehaviour:
     m_SpecifySize: 1
     m_Name: ClefPartie2
     m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 4924277127396436451
+      m_GuidHigh: 12988896557089577912
+    m_SerializedTextureGuid:
+      m_GuidLow: 3410449015496742188
+      m_GuidHigh: 14109475649251520602
+    m_Size: {x: 0.061, y: 0.11177457}
+    m_SpecifySize: 1
+    m_Name: CanneAPecheCard
+    m_Texture: {fileID: 0}
+  - m_SerializedGuid:
+      m_GuidLow: 5755648043752275164
+      m_GuidHigh: 10164802396389295024
+    m_SerializedTextureGuid:
+      m_GuidLow: 0
+      m_GuidHigh: 0
+    m_Size: {x: 0, y: 0}
+    m_SpecifySize: 0
+    m_Name: Piscine
+    m_Texture: {fileID: 0}

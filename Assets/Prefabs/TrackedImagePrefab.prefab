@@ -70,6 +70,10 @@ MonoBehaviour:
     gameObject: {fileID: 1269346954019752141}
   - id: ClefComplete
     gameObject: {fileID: 539576471907310203}
+  - id: CanneAPecheCard
+    gameObject: {fileID: 3009365916968311392, guid: d97f6b0d2200433429d4ca99a39c592f, type: 3}
+  - id: Piscine
+    gameObject: {fileID: 6486538621878513661, guid: 586a24e2d2b37b9428264949cb84d431, type: 3}
 --- !u!1 &7359863194717776577
 GameObject:
   m_ObjectHideFlags: 0
