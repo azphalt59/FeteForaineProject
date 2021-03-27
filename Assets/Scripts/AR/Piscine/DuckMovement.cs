@@ -55,8 +55,8 @@ public class DuckMovement : MonoBehaviour
 
     Vector3 GetSwimRotation(float Time, float BobblingSpeed, float rotationTime){
         Vector3 rotation = Vector3.zero;
-        rotation.x = Mathf.Cos(Time) * BobblingSpeed;
-        rotation.z = Mathf.Sin(Time) * BobblingSpeed;
+        rotation.x = Mathf.Cos(Time * BobblingSpeed);
+        rotation.z = Mathf.Sin(Time * BobblingSpeed);
         rotation = rotation * BobbleAngle;
         rotation.y = (Time * 360) * RotationTime;
         rotation.y += 90;

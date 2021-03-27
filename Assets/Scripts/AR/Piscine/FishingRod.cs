@@ -11,9 +11,11 @@ public class FishingRod : MonoBehaviour
         DuckCaught
     }
 
+    private bool IsInArea = false;
+
     public RodState CurrentRodState = RodState.idle;
-    
-    
+    private DuckStateManager HookedDuck;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -23,20 +25,39 @@ public class FishingRod : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (IsInArea == false & HookedDuck != null){
+            UnHookDuck();
+        }
+    }
+
+    private void UnHookDuck(){
+        HookedDuck.GetComponent<DuckIndex>().UnHook();
+        HookedDuck = null;
     }
 
     public void TryHook(DuckStateManager manager){
         if (manager.CurrentCanardState == DuckStateManager.CanardStates.Swimming){
             manager.Caught(Hook);
             CurrentRodState = RodState.DuckCaught;
+            HookedDuck = manager;
         }
     }
 
     private void OnTriggerEnter(Collider other) {
         DuckStateManager manager = other.GetComponent<DuckStateManager>();
-        if (manager != null){
+        if (manager != null && HookedDuck == null){
             TryHook(manager);
+        }
+        if (other.tag == "PiscineArea"){
+            IsInArea = true;
+            Debug.Log("Entered Piscine");
+        }
+    }
+
+    private void OnTriggerExit(Collider other) {
+        if (other.tag == "PiscineArea"){
+            IsInArea = false;
+            Debug.Log("Left Piscine");
         }
     }
 }
