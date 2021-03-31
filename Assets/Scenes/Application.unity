@@ -38583,6 +38583,12 @@ MonoBehaviour:
   C4: 0
   C5: 0
   C6: 0
+  c1: {fileID: 163790810}
+  c2: {fileID: 1680172399}
+  c3: {fileID: 39651207}
+  c4: {fileID: 960364940}
+  c5: {fileID: 913861067}
+  c6: {fileID: 1411890167}
 --- !u!114 &1127561033875173490
 MonoBehaviour:
   m_ObjectHideFlags: 0

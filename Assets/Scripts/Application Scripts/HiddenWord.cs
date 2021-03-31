@@ -16,23 +16,32 @@ public class HiddenWord : MonoBehaviour
     HiddenLetter hidden4;
     HiddenLetter hidden5;
     HiddenLetter hidden6;
+    
     public int C1;
     public int C2;
     public int C3;
     public int C4;
     public int C5;
     public int C6;
+    public GameObject c1;
+    public GameObject c2;
+    public GameObject c3;
+    public GameObject c4;
+    public GameObject c5;
+    public GameObject c6;
+
+    
 
 
     // Start is called before the first frame update
     void Start()
     {
-        hidden1 = GameObject.Find("Case1").GetComponent<HiddenLetter>();
-        hidden2 = GameObject.Find("Case2").GetComponent<HiddenLetter>();
-        hidden3 = GameObject.Find("Case3").GetComponent<HiddenLetter>();
-        hidden4 = GameObject.Find("Case4").GetComponent<HiddenLetter>();
-        hidden5 = GameObject.Find("Case5").GetComponent<HiddenLetter>();
-        hidden6 = GameObject.Find("Case6").GetComponent<HiddenLetter>();
+        hidden1 = c1.GetComponent<HiddenLetter>();
+        hidden2 = c2.GetComponent<HiddenLetter>();
+        hidden3 = c3.GetComponent<HiddenLetter>();
+        hidden4 = c4.GetComponent<HiddenLetter>();
+        hidden5 = c5.GetComponent<HiddenLetter>();
+        hidden6 = c6.GetComponent<HiddenLetter>();
     }
 
     // Update is called once per frame
