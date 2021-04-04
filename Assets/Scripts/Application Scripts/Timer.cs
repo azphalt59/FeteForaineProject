@@ -9,7 +9,11 @@ public class Timer : MonoBehaviour
     public bool timerIsRunning = false;
     public Text timerText;
     public float penalityTime;
+    float littlePenalityTime = 30f;
+    float littlelittlepenalityTime = 20f;
     public List<Button> buttons = new List<Button>();
+    
+    public GameObject littlePenalityText;
 
     void DisplayTime(float timeToDisplay)
     {
@@ -42,7 +46,22 @@ public class Timer : MonoBehaviour
     {
         timeRemaining -= penalityTime;
     }
+    public void LittlePenality()
+    {
+        StartCoroutine(DisplayLittlePenality());
+        timeRemaining -= littlePenalityTime;
+    }
+    public void LitttleLittlePenality()
+    {
+        timeRemaining -= littlelittlepenalityTime;
+    }
     
+    public IEnumerator DisplayLittlePenality()
+    {
+        littlePenalityText.SetActive(true);
+        yield return new WaitForSeconds(3f);
+        littlePenalityText.SetActive(false);
+    }
     void Update()
     {
         if(timerIsRunning)
