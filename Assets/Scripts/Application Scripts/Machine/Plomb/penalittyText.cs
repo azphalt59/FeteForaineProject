@@ -23,6 +23,12 @@ public class penalittyText : MonoBehaviour
     public Button confirmbutton;
     public List<GameObject> bgFills;
 
+    SoundManager soundManager;
+
+    void Start() 
+    {
+        soundManager = this.gameObject.GetComponent<SoundManager>();
+    }
     public void DisplayPenalityText()
     {
         StartCoroutine(ShowPenalityText());
@@ -32,10 +38,11 @@ public class penalittyText : MonoBehaviour
         penality.SetActive(true);
         DisablePlomb();
         yield return new WaitForSeconds(3f);
-        penality.SetActive(false);
+        
     }
     public void BackToCanvasMain()
     {
+        soundManager.carabineIsOpen = false;
         canvasHiddenWord.SetActive(false);
         canvasPlomb.SetActive(false);
         canvasCryptex.SetActive(false);

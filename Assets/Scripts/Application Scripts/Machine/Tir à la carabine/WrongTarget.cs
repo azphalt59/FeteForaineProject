@@ -7,7 +7,7 @@ public class WrongTarrget : MonoBehaviour
 {
     Timer timer;
     public GameObject penalityGameObject;
-    public float timeToDisplay = 1f;
+    public float timeToDisplay = 2f;
 
     public void Start() 
     {
@@ -22,7 +22,7 @@ public class WrongTarrget : MonoBehaviour
     }
     public void addPenality()
     {
-        timer.Penality();
+        timer.LitttleLittlePenality();
     }
     
     public IEnumerator MessagePenalityTime()

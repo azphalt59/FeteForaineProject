@@ -15,6 +15,9 @@ public class Tips : MonoBehaviour
     public Text indiceDisplayerText2;
     public Text indiceDisplayerText3;
     public Text indiceDisplayerCardNumber;
+    public GameObject wrongtips;
+    public GameObject backgroundTips;
+    bool canCoroutine = false;
     
     public List<Indice> allTips;
     // Start is called before the first frame update
@@ -31,6 +34,7 @@ public class Tips : MonoBehaviour
         {
             tipsTextValue = "";
         }
+        
     }
     public void DisplayTips()
     {
@@ -56,9 +60,13 @@ public class Tips : MonoBehaviour
     }
     public void ConfirmCode()
     {
+        canCoroutine = true;
+        backgroundTips.SetActive(false);
         indiceDisplayer.SetActive(true);
+        wrongtips.SetActive(true);
         for(int i=0; i < allTips.Count; i++)
         {
+            
             if(tipsTextValue == allTips[i].index.ToString())
             {
                 indiceDisplayerCardNumber.text = allTips[i].index.ToString();
@@ -73,26 +81,38 @@ public class Tips : MonoBehaviour
                 indiceDisplayerText3.text = allTips[i].st3;
                 } else {indiceDisplayerText3.text = "";}
             }
-            /*else
+            StartCoroutine(Displayer());    
+        }
+        if(indiceDisplayerText.text == "")
+        {
+            indiceDisplayer.SetActive(false);
+            wrongtips.SetActive(false);
+            backgroundTips.SetActive(true);
+            if(canCoroutine == true)
             {
-                indiceDisplayerCardNumber.text = "Mauvais numéro";
-                indiceDisplayerText.text = "Il n'y a pas d'indice pour cette carte ou cette carte n'existe pas";
-                indiceDisplayerText2.text = "";
-                indiceDisplayerText3.text = "";
-            }*/
-           
-            
+                StartCoroutine(WrongDisplayer());
+            }
             
         }
-        StartCoroutine(Displayer());     
+             
     }
     public IEnumerator Displayer()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(8f);
         indiceDisplayerText.text = "";
         indiceDisplayerText2.text = "";
         indiceDisplayerText3.text = "";
         indiceDisplayerCardNumber.text = "";
         indiceDisplayer.SetActive(false);
+        wrongtips.SetActive(false);
+        backgroundTips.SetActive(true);
+    }
+    public IEnumerator WrongDisplayer()
+    {
+        
+        wrongtips.SetActive(true);
+        yield return new WaitForSeconds(2.5f);
+        wrongtips.SetActive(false);
+        canCoroutine = false;
     }
 }

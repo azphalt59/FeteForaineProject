@@ -15,6 +15,8 @@ public class Machine : MonoBehaviour
     public GameObject canvasPlomb;
     public GameObject canvasCarabine;
 
+    SoundManager soundManager;
+
     public List<string> machines = new List<string>();
     [Header("Machines")]
     public GameObject TirCarabine;
@@ -22,6 +24,10 @@ public class Machine : MonoBehaviour
     public GameObject Cryptex;
     public GameObject ToucheCoule;
 
+    void Start() 
+    {
+        soundManager = this.gameObject.GetComponent<SoundManager>();
+    }
     void Update()
     {
         DisplayCode();
@@ -30,7 +36,6 @@ public class Machine : MonoBehaviour
             machineTextValue = "";
         }
     }
-
     public void ActiveCanvasMachine()
     {
         canvasMachine.SetActive(true);
@@ -57,6 +62,7 @@ public class Machine : MonoBehaviour
         {
             if(machineTextValue == machines[0]) //77
                 {
+                soundManager.carabineIsOpen = true;
                 canvasCarabine.SetActive(true);
                 TirCarabine.SetActive(true);
                 canvasMain.SetActive(false);
@@ -85,13 +91,18 @@ public class Machine : MonoBehaviour
                 canvasMain.SetActive(false);
                 canvasMachine.SetActive(false);
                 Debug.Log("MachinePlomb");
-                }
-            else
+                } 
+        }
+        else
                 {
+                wrongMachine.SetActive(true);
                 Debug.Log("Machine inconnue");
                 machineTextValue = "";
                 }
-        }
+    }
+    public void CloseCodeWrongWindow()
+    {
+        wrongMachine.SetActive(false);
     }
 }
     

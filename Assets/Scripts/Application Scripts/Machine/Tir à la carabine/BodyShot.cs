@@ -6,8 +6,13 @@ using UnityEngine.UI;
 public class BodyShot : MonoBehaviour
 {
     public GameObject angryText;
-    public float timeToDisplay = 1f;
-    // Start is called before the first frame update
+    public float timeToDisplay = 2f;
+    SoundManager soundManager;
+
+    void Start() 
+    {
+        soundManager = GameObject.Find("AppliManager").GetComponent<SoundManager>();
+    }
     public void OnMouseDown() 
     {
         StartCoroutine(MessagePenalityTime());
@@ -16,6 +21,7 @@ public class BodyShot : MonoBehaviour
     public IEnumerator MessagePenalityTime()
     {
         angryText.SetActive(true);
+        soundManager.ForainHit();
         yield return new WaitForSeconds(timeToDisplay);
         angryText.SetActive(false);  
     }

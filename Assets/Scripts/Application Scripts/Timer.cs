@@ -10,9 +10,15 @@ public class Timer : MonoBehaviour
     public Text timerText;
     public float penalityTime;
     float littlePenalityTime = 30f;
+    float littlelittlepenalityTime = 20f;
     public List<Button> buttons = new List<Button>();
     
     public GameObject littlePenalityText;
+
+    
+    public GameObject littlePenalityText;
+
+    SoundManager soundManager;
 
     void DisplayTime(float timeToDisplay)
     {
@@ -25,6 +31,7 @@ public class Timer : MonoBehaviour
     }
     private void Start()
     {
+        soundManager = this.gameObject.GetComponent<SoundManager>();
         timerIsRunning = false;
         DisplayTime(timeRemaining);
     }
@@ -44,11 +51,27 @@ public class Timer : MonoBehaviour
     public void Penality()
     {
         timeRemaining -= penalityTime;
+        soundManager.ClownLaugh();
     }
     public void LittlePenality()
     {
         StartCoroutine(DisplayLittlePenality());
         timeRemaining -= littlePenalityTime;
+        soundManager.ClownLaugh();
+    }
+    public void LitttleLittlePenality()
+    {
+        timeRemaining -= littlelittlepenalityTime;
+        soundManager.ClownLaugh();
+    }
+    public void LittlePenality()
+    {
+        StartCoroutine(DisplayLittlePenality());
+        timeRemaining -= littlePenalityTime;
+    }
+    public void LitttleLittlePenality()
+    {
+        timeRemaining -= littlelittlepenalityTime;
     }
     
     public IEnumerator DisplayLittlePenality()
