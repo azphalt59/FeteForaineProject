@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Machine : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class Machine : MonoBehaviour
     public GameObject canvasCarabine;
 
     SoundManager soundManager;
+    GoToScene goToScene;
 
     public List<string> machines = new List<string>();
     [Header("Machines")]
@@ -24,14 +26,20 @@ public class Machine : MonoBehaviour
     public GameObject Cryptex;
     public GameObject ToucheCoule;
 
+    public static bool CarabineDone = false;
+    public static bool ToucheCouleDone = false;
+    public static bool PlombDone = false;
+    public static bool CryptexDone= false;
+
     void Start() 
     {
         soundManager = this.gameObject.GetComponent<SoundManager>();
+        goToScene = this.gameObject.GetComponent<GoToScene>();
     }
     void Update()
     {
         DisplayCode();
-        if (machineTextValue.Length > 2)
+        if (machineTextValue.Length > 3)
         {
             machineTextValue = "";
         }
@@ -92,6 +100,10 @@ public class Machine : MonoBehaviour
                 canvasMachine.SetActive(false);
                 Debug.Log("MachinePlomb");
                 } 
+            if(machineTextValue == machines[5]) //100
+                {
+                    goToScene.LoadScene();
+                }
         }
         else
                 {
