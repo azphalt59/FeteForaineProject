@@ -12,6 +12,8 @@ public class Timer : MonoBehaviour
     float littlePenalityTime = 30f;
     float littlelittlepenalityTime = 20f;
     public List<Button> buttons = new List<Button>();
+    
+    public GameObject littlePenalityText;
 
     
     public GameObject littlePenalityText;
@@ -61,6 +63,15 @@ public class Timer : MonoBehaviour
     {
         timeRemaining -= littlelittlepenalityTime;
         soundManager.ClownLaugh();
+    }
+    public void LittlePenality()
+    {
+        StartCoroutine(DisplayLittlePenality());
+        timeRemaining -= littlePenalityTime;
+    }
+    public void LitttleLittlePenality()
+    {
+        timeRemaining -= littlelittlepenalityTime;
     }
     
     public IEnumerator DisplayLittlePenality()
