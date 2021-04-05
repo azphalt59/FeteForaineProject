@@ -8,14 +8,26 @@ public class Machine : MonoBehaviour
     public Text machineText;
     string machineTextValue = "";
     public GameObject canvasMachine;
+    public GameObject wrongMachine;
+    public GameObject canvasMain;
+    public GameObject canvasCryptex;
+    public GameObject canvasToucheCoule;
+    public GameObject canvasPlomb;
+    public GameObject canvasCarabine;
 
-    // Start is called before the first frame update
-    void Start()
+    SoundManager soundManager;
+
+    public List<string> machines = new List<string>();
+    [Header("Machines")]
+    public GameObject TirCarabine;
+    public GameObject LaBoule;
+    public GameObject Cryptex;
+    public GameObject ToucheCoule;
+
+    void Start() 
     {
-        
+        soundManager = this.gameObject.GetComponent<SoundManager>();
     }
-
-    // Update is called once per frame
     void Update()
     {
         DisplayCode();
@@ -24,7 +36,6 @@ public class Machine : MonoBehaviour
             machineTextValue = "";
         }
     }
-
     public void ActiveCanvasMachine()
     {
         canvasMachine.SetActive(true);
@@ -47,14 +58,58 @@ public class Machine : MonoBehaviour
     }
     public void ConfirmCode()
     {
-        if(machineTextValue == "10")
+        if (machines.Contains(machineTextValue))
         {
-            Debug.Log("Lance la machine de la carte 10");
+            if(machineTextValue == machines[0]) //77
+                {
+                soundManager.carabineIsOpen = true;
+                canvasCarabine.SetActive(true);
+                TirCarabine.SetActive(true);
+                canvasMain.SetActive(false);
+                canvasMachine.SetActive(false);
+                Debug.Log("MachineCarabine");
+                }
+            if(machineTextValue == machines[2]) //79
+                {
+                Cryptex.SetActive(true);
+                Debug.Log("MachineCryptex");
+                canvasMain.SetActive(false);
+                canvasMachine.SetActive(false);
+                canvasCryptex.SetActive(true);
+                }
+            if(machineTextValue == machines[3]) //87
+                {
+                ToucheCoule.SetActive(true);
+                canvasToucheCoule.SetActive(true);
+                canvasMain.SetActive(false);
+                canvasMachine.SetActive(false);
+                Debug.Log("MachineToucheCoule");
+                }
+            if(machineTextValue == machines[4]) //87
+                {
+                canvasPlomb.SetActive(true);
+                canvasMain.SetActive(false);
+                canvasMachine.SetActive(false);
+                Debug.Log("MachinePlomb");
+                } 
         }
         else
-        {
-            Debug.Log("Machine inconnue");
-            machineTextValue = "";
-        }
+                {
+                wrongMachine.SetActive(true);
+                Debug.Log("Machine inconnue");
+                machineTextValue = "";
+                }
+    }
+    public void CloseCodeWrongWindow()
+    {
+        wrongMachine.SetActive(false);
     }
 }
+    
+            
+            
+            
+        
+    
+
+
