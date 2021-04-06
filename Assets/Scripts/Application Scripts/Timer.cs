@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     public static float timeRemaining = 3600f;
-    public bool timerIsRunning = false;
+    public static bool timerIsRunning = false;
     public Text timerText;
     public float penalityTime;
     float littlePenalityTime = 30f;
     float littlelittlepenalityTime = 20f;
     public List<Button> buttons = new List<Button>();
+    public static bool buttonPausePlayBool;
+    public Button playPause;
     
     public GameObject littlePenalityText;
 
@@ -32,7 +34,6 @@ public class Timer : MonoBehaviour
         timerIsRunning = false;
         DisplayTime(timeRemaining);
     }
-
     public void PauseAndResume()
     {
         if(timerIsRunning == true)

@@ -5,8 +5,8 @@ using UnityEngine;
 public class Headshot : MonoBehaviour
 {
     public GameObject canvasMain;
-    public GameObject canvasMachine;
-    public GameObject canvasCarabine;
+    public static GameObject canvasMachine;
+    public static GameObject canvasCarabine;
 
     public GameObject forainHead;
     public GameObject forainBody;
@@ -17,11 +17,12 @@ public class Headshot : MonoBehaviour
     public GameObject backbutton;
 
     SoundManager soundManager;
-  
+    Machine machine;
     // Start is called before the first frame update
 
     void Start() 
     {
+        machine = GameObject.Find("AppliManager").GetComponent<Machine>();
         soundManager = GameObject.Find("AppliManager").GetComponent<SoundManager>();
     }
     public void OnMouseDown() 
@@ -44,11 +45,9 @@ public class Headshot : MonoBehaviour
     public IEnumerator spawnCanvasMain()
     {
         soundManager.carabineIsOpen = false;
-        backbutton.SetActive(false);
         succesText.SetActive(true);
         yield return new WaitForSeconds(3f);
         bg.SetActive(false);
-        succesText.SetActive(false);
         canvasMain.SetActive(true);
         carabine.SetActive(false);
         canvasCarabine.SetActive(false);

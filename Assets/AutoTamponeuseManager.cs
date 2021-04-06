@@ -33,7 +33,7 @@ public class AutoTamponeuseManager : MonoBehaviour
         yield return new WaitForSeconds(3f);
         wintext.SetActive(true);
         yield return new WaitForSeconds(4f);
-        wintext.SetActive(false);
+       
         backTocanvasMain.BackToCanvasMain();
     }
     void Update() 
