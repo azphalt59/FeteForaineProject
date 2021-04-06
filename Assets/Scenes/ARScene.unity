@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 114235165}
   - component: {fileID: 114235167}
   - component: {fileID: 114235166}
+  - component: {fileID: 114235168}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -181,8 +182,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 20
+    m_Font: {fileID: 12800000, guid: f8ac1417d0b972e43b09e27261e12db8, type: 3}
+    m_FontSize: 50
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
@@ -202,6 +203,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 114235164}
   m_CullTransparentMesh: 0
+--- !u!114 &114235168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 114235164}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 26be9650911e84a45bb0416f6bf5277c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &466080859
 GameObject:
   m_ObjectHideFlags: 0
