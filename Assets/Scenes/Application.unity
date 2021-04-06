@@ -21651,12 +21651,12 @@ GameObject:
   - component: {fileID: 1240551119}
   - component: {fileID: 1240551122}
   m_Layer: 5
-  m_Name: Button
+  m_Name: AR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1240551118
 RectTransform:
   m_ObjectHideFlags: 0
@@ -49211,6 +49211,8 @@ MonoBehaviour:
   - 84
   - 87
   - 100
+  - 23
+  - 32
   TirCarabine: {fileID: 1544630749}
   LaBoule: {fileID: 1676575626}
   Cryptex: {fileID: 164155326}

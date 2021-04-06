@@ -104,6 +104,14 @@ public class Machine : MonoBehaviour
                 {
                     goToScene.LoadScene();
                 }
+            if(machineTextValue == machines[6]) //23
+                {
+                    goToScene.LoadScene();
+                }
+            if(machineTextValue == machines[7]) //32
+                {
+                    goToScene.LoadScene();
+                }
         }
         else
                 {
